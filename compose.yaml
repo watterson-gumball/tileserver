@@ -1,0 +1,10 @@
+services:
+  tileserver:
+    build:
+      context: .
+    volumes:
+      - ${PWD}/scripts:/scripts
+      - ${PWD}/openstreetmap-carto:/root/src/openstreetmap-carto
+      - ${PWD}/data:/root/data
+    ports:
+      - "8088:80"
